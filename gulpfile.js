@@ -29,7 +29,7 @@ const js = (cb) => {
   cb();
 };
 
-const watcher = (cb) => {
+const watcher = () => {
   browserSync.init({
     server: {
       basedir: './'
@@ -39,8 +39,6 @@ const watcher = (cb) => {
   watch('./scss/**/*.scss', css);
   watch('./index.js', js);
   watch('./*.html').on('change', browserSync.reload);
-
-  cb();
 };
 
 exports.css = css;
