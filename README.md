@@ -12,6 +12,7 @@ git clone git@github.com:d-h-e/gulp4-postcss-prototyping.git
 2. install dev-depandencies
 
 ```sh
+cd gulp4-postcss-prototyping
 npm install
 ```
 
