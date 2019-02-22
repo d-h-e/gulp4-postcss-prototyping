@@ -1,0 +1,15 @@
+{
+  "name": "gulp4-postcss",
+  "version": "1.0.0",
+  "description": "using postcss with gulp 4",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulpjs",
+    "postcss"
+  ],
+  "author": "d-h-e",
+  "license": "ISC"
+}
