@@ -13,6 +13,7 @@ git clone git@github.com:d-h-e/gulp4-postcss-prototyping.git
 
 ```sh
 cd gulp4-postcss-prototyping
+npm i -g gulp-cli
 npm install
 ```
 
