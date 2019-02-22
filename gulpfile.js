@@ -1,0 +1,36 @@
+const { src, dest, watch } = require('gulp');
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync').create();
+
+const css = (cb) => {
+  src('./scss/**/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('./css'))
+    .pipe(browserSync.stream());
+
+  cb();
+};
+
+const watcher = (cb) => {
+  browserSync.init({
+    server: {
+      basedir: './'
+    }
+  });
+
+  watch('./scss/**/*.scss', css);
+  watch('./*.html').on('change', browserSync.reload);
+  watch('./**/*.js').on('change', browserSync.reload);
+
+  cb();
+};
+
+exports.css = css;
+exports.watch = watcher;
+exports.default = watcher;
