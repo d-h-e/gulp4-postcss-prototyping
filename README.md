@@ -1,19 +1,21 @@
 # gulp4-postcss-prototyping
 fast css prototyping with sass, postcss and browser-sync
 
-## clone repo
+## install
+
+1. clone git reop
 
 ```sh
 git clone git@github.com:d-h-e/gulp4-postcss-prototyping.git
 ```
 
-## install dev-depandencies
+2. install dev-depandencies
 
 ```sh
 npm install
 ```
 
-## start gulp
+3. start gulp
 
 ```sh
 gulp
