@@ -1,25 +1,25 @@
 {
-  "name": "gulp4-postcss",
-  "version": "1.0.0",
-  "description": "using postcss with gulp 4",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "gulpjs",
-    "postcss"
-  ],
-  "author": "d-h-e",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^9.4.8",
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.1"
-  }
+    "name": "gulp4-postcss",
+    "version": "1.0.0",
+    "description": "using postcss with gulp 4",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "gulpjs",
+        "postcss"
+    ],
+    "author": "d-h-e",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^9.4.8",
+        "browser-sync": "^2.26.3",
+        "gulp": "^4.0.0",
+        "gulp-postcss": "^8.0.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-uglify-es": "^1.0.4"
+    }
 }
