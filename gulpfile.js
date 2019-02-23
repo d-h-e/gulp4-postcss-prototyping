@@ -4,6 +4,7 @@ const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify-es').default;
 const rename = require('gulp-rename');
+const plumber = require('gulp-plumber');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const cssmqpacker = require('css-mqpacker'); // prevent media query bubbling
@@ -33,8 +34,9 @@ const mqoptions = {
 
 const css = (cb) => {
     src('./scss/**/*.scss')
+        .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass())
         .pipe(postcss([autoprefixer(), cssmqpacker(mqoptions)]))
         .pipe(sourcemaps.write('.'))
         .pipe(dest('./css'))
@@ -45,6 +47,7 @@ const css = (cb) => {
 
 const js = (cb) => {
     src('./index.js')
+        .pipe(plumber())
         .pipe(uglify())
         .pipe(rename({
             suffix: '.min'
