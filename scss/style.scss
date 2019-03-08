@@ -1,12 +1,13 @@
 @import 'partial';
 @import 'mqueries';
 
-body {
- // background: green;
- // color: white;
+:root {
+    --color-text: red;
+    --color-background: #ffedd0
 }
 
-button {
- user-select: none;
- padding: 10px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-text);
+    background: var(--color-background);
 }
