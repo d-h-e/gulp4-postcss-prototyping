@@ -4,8 +4,7 @@ body {
 
 :root {
   --color-text: red;
-  --color-background: #ffedd0
-; }
+  --color-background: #ffedd0; }
 
 body {
   font-family: Arial, Helvetica, sans-serif;

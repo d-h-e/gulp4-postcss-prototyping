@@ -1,9 +1,10 @@
 @import 'partial';
 @import 'mqueries';
+// @import 'canary_css_mixins_native';
 
 :root {
     --color-text: red;
-    --color-background: #ffedd0
+    --color-background: #ffedd0;
 }
 
 body {
