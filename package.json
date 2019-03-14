@@ -17,7 +17,9 @@
     "author": "d-h-e",
     "license": "ISC",
     "devDependencies": {
-        "autoprefixer": "^9.4.8",
+        "@typescript-eslint/eslint-plugin": "^1.4.2",
+        "@typescript-eslint/parser": "^1.4.2",
+        "autoprefixer": "^9.4.10",
         "browser-sync": "^2.26.3",
         "css-mqpacker": "^7.0.0",
         "gulp": "^4.0.0",
@@ -26,6 +28,8 @@
         "gulp-rename": "^1.4.0",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.5",
-        "gulp-uglify-es": "^1.0.4"
+        "gulp-typescript": "^5.0.1",
+        "gulp-uglify-es": "^1.0.4",
+        "typescript": "^3.3.3333"
     }
 }

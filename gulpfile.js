@@ -1,4 +1,5 @@
 const { src, dest, watch } = require('gulp');
+const ts = require('gulp-typescript');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
@@ -10,27 +11,27 @@ const browserSync = require('browser-sync').create();
 const cssmqpacker = require('css-mqpacker'); // prevent media query bubbling
 
 const mqoptions = {
-  sort: function(a, b) {
-      const regex = /(\d+)/g;
-      const regex2 = /(\d+)/g;
-      var aa = regex.exec(a);
-      var bb = regex2.exec(b);
-      var an = null;
-      var bn = null;
-      if (aa != null) {
-          an = parseInt(aa);
-      }
-      if (bb != null) {
-          bn = parseInt(bb);
-      }
-      if (a.indexOf('max-width') != -1 && b.indexOf('max-width') != -1) {
-          if (an < bn) return 1;
-          if (an > bn) return -1;
-          return 0;
-      }
-      return a.localeCompare(b);
-  }
-}
+    sort(a, b) {
+        const regex = /(\d+)/g;
+        const regex2 = /(\d+)/g;
+        const aa = regex.exec(a);
+        const bb = regex2.exec(b);
+        let an = null;
+        let bn = null;
+        if (aa != null) {
+            an = parseInt(aa);
+        }
+        if (bb != null) {
+            bn = parseInt(bb);
+        }
+        if (a.indexOf('max-width') != -1 && b.indexOf('max-width') != -1) {
+            if (an < bn) return 1;
+            if (an > bn) return -1;
+            return 0;
+        }
+        return a.localeCompare(b);
+    }
+};
 
 const css = (cb) => {
     src('./scss/**/*.scss')
@@ -58,6 +59,19 @@ const js = (cb) => {
     cb();
 };
 
+const tsProject = ts.createProject({
+    declaration: true
+});
+
+const tsc = (cb) => {
+    src('./index.ts')
+        .pipe(plumber())
+        .pipe(tsProject())
+        .pipe(dest('./'));
+
+    cb();
+};
+
 const watcher = () => {
     browserSync.init({
         server: {
@@ -67,6 +81,7 @@ const watcher = () => {
 
     watch('./scss/**/*.scss', css);
     watch('./index.js', js);
+    watch('./index.ts', tsc);
     watch('./*.html').on('change', browserSync.reload);
 };
 
