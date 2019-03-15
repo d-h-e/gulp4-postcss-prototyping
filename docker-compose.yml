@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  docker-gulp4:
+    build: .
+    image: docker_gulp4_css
+    env_file:
+    - .env
+    container_name: gulp4_postcss
+    ports:
+      - "3000:3000"
+    # network_mode: host
+    command: "yarn run gulp"
+    volumes:
+      - ./:/starterfiles
+      - /starterfiles/node_modules
+    labels:
+      - "traefik.backend=docker-gulp4"
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:gulp.dheserver.de"
+      - "traefik.port=3000"
+      - "traefik.docker.network=traefik_proxy"
+    networks:
+      - traefik_proxy
+
+networks:
+  traefik_proxy:
+    external:
+      name: traefik_proxy
+  default:
+    driver: bridge

@@ -2,3 +2,4 @@ node_modules
 .pnp/
 yarn-error.log
 .pnp.js
+.env
