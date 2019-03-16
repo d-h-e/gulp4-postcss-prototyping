@@ -24,3 +24,13 @@ yarn install
 ```sh
 yarn run gulp
 ```
+
+---
+
+## Create a StackOverflow Snippet
+
+```sh
+yarn run gulp snippet
+```
+
+console output is copied to clipboard

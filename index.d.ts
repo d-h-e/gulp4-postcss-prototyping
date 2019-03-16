@@ -1,1 +1,1 @@
-declare let myStr: string;
+

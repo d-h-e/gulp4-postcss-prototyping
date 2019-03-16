@@ -30,3 +30,20 @@ hr {
 ul {
  list-style: none;
 }
+
+input,
+textarea,
+select,
+button {
+ color: inherit;
+ font: inherit;
+ letter-spacing: inherit;
+}
+
+button * {
+ pointer-events: none;
+}
+
+[hidden] {
+ display: none !important;
+}

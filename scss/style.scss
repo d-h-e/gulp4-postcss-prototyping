@@ -1,7 +1,6 @@
-@import 'reset';
-@import 'partial';
-@import 'mqueries';
-// @import 'canary_css_mixins_native';
+// @import 'reset';
+// @import 'partial';
+// @import 'mqueries';
 
 :root {
  --color-text: red;
@@ -13,21 +12,4 @@ body {
  color: var(--color-text);
  background: var(--color-background);
  height: 100vh;
-}
-
-input,
-textarea,
-select,
-button {
- color: inherit;
- font: inherit;
- letter-spacing: inherit;
-}
-
-button * {
- pointer-events: none;
-}
-
-[hidden] {
- display: none !important;
 }

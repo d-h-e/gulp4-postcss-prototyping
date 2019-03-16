@@ -9,6 +9,10 @@ const plumber = require('gulp-plumber');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const cssmqpacker = require('css-mqpacker'); // prevent media query bubbling
+const fs = require('fs').promises;
+const cheerio = require('cheerio');
+const clipboardy = require('clipboardy');
+
 
 const mqoptions = {
     sort(a, b) {
@@ -72,6 +76,46 @@ const tsc = (cb) => {
     cb();
 };
 
+const createSnippetSO = (cb) => {
+    var snipJS = '<!-- language: lang-js -->\n\n';
+    var snipCSS = '<!-- language: lang-css -->\n\n';
+    var snipHTML = '<!-- language: lang-html -->\n\n';
+
+    const createSnippetsParts = async() => {
+        snipJS += await fs.readFile('./index.js', 'utf8', function(err, content) {
+            return content;
+        });
+
+        snipCSS += await fs.readFile('./css/style.css', 'utf8', function(err, content) {
+            return content;
+        });
+
+        const tmpHTML = await fs.readFile('./index.html', 'utf8', function(err, content) {
+            return content;
+        });
+
+        const $ = cheerio.load(tmpHTML);
+        $('body > #indexjs').remove();
+        snipHTML += $('body').html().trim();
+
+        return;
+    }
+
+    createSnippetsParts().then(() => {
+        const snipComplete = `<!-- begin snippet: js hide: false console: true babel: false -->
+        ${snipJS}
+        ${snipCSS}
+        ${snipHTML}
+        <!-- end snippet -->`;
+
+        console.log(snipComplete);
+        clipboardy.writeSync(snipComplete);
+    });
+
+
+    cb();
+}
+
 const watcher = () => {
     browserSync.init({
         server: {
@@ -88,3 +132,4 @@ const watcher = () => {
 exports.css = css;
 exports.watch = watcher;
 exports.default = watcher;
+exports.snippet = createSnippetSO;

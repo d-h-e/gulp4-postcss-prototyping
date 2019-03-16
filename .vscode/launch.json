@@ -4,18 +4,28 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [{
-        "type": "chrome",
-        "request": "launch",
-        "windows": {
-            "userDataDir": true,
-            "runtimeExecutable": "C:/Program Files (x86)/Google/Chrome Dev/Application/chrome.exe",
-            "runtimeArgs": [
-                "--new-window",
-                "--remote-debugging-port=9222"
-            ],
+            "type": "node",
+            "request": "launch",
+            "name": "Gulp task",
+            "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+            "args": [
+                "task"
+            ]
         },
-        "name": "Launch Chrome against localhost",
-        "url": "http://127.0.0.1:3000",
-        "webRoot": "${workspaceFolder}"
-    }]
+        {
+            "type": "chrome",
+            "request": "launch",
+            "windows": {
+                "userDataDir": true,
+                "runtimeExecutable": "C:/Program Files (x86)/Google/Chrome Dev/Application/chrome.exe",
+                "runtimeArgs": [
+                    "--new-window",
+                    "--remote-debugging-port=9222"
+                ],
+            },
+            "name": "Launch Chrome against localhost",
+            "url": "http://127.0.0.1:3000",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
 }
