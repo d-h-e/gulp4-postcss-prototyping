@@ -103,10 +103,10 @@ const createSnippetSO = (cb) => {
 
     createSnippetsParts().then(() => {
         const snipComplete = `<!-- begin snippet: js hide: false console: true babel: false -->
-        ${snipJS}
-        ${snipCSS}
-        ${snipHTML}
-        <!-- end snippet -->`;
+${snipJS}
+${snipCSS}
+${snipHTML}
+<!-- end snippet -->`;
 
         console.log(snipComplete);
         clipboardy.writeSync(snipComplete);
