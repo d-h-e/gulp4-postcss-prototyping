@@ -18,15 +18,15 @@
     "author": "d-h-e",
     "license": "ISC",
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^1.6.0",
-        "@typescript-eslint/parser": "^1.6.0",
-        "autoprefixer": "^9.5.1",
-        "browser-sync": "^2.26.3",
+        "@typescript-eslint/eslint-plugin": "^1.11.0",
+        "@typescript-eslint/parser": "^1.11.0",
+        "autoprefixer": "^9.6.0",
+        "browser-sync": "^2.26.7",
         "cheerio": "^1.0.0-rc.3",
-        "clipboardy": "^2.0.0",
+        "clipboardy": "^2.1.0",
         "css-mqpacker": "^7.0.0",
-        "eslint": "^5.16.0",
-        "gulp": "^4.0.0",
+        "eslint": "5.16.0",
+        "gulp": "^4.0.2",
         "gulp-plumber": "^1.2.1",
         "gulp-postcss": "^8.0.0",
         "gulp-rename": "^1.4.0",
@@ -34,6 +34,6 @@
         "gulp-sourcemaps": "^2.6.5",
         "gulp-typescript": "^5.0.1",
         "gulp-uglify-es": "^1.0.4",
-        "typescript": "^3.4.3"
+        "typescript": "^3.5.2"
     }
 }

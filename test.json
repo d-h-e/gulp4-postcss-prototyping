@@ -1,0 +1,30 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Online Produktmanager",
+    "description": "<h2>Verstärkung (Datenmanagement) in Vollzeit gesucht!</h2> <p> Optimieren Sie nach umfassender Einarbeitung Artikelstammdaten und freuen Sie sich (wie wir) über direkt sichtbare Online-Ergebnisse und das Lob unserer Kunden! </p> <p> Ihre künftigen Kollegen und unser selbst entwickeltes Datenmanagement-Tool auf Grundlage eines modernen Grid-Systems bieten Ihnen dabei volle Unterstützung. </p> <p> Unser/e Wunschkanditat/in sollte einige der folgenden Voraussetzungen mitbringen: </p> <ul> <li>Abgeschlossene Ausbildung im IT- oder Handwerksbereich, Abitur oder Hochschulabschluss</li>  <li>Sicherer Umgang mit Office-Systemen (Excel, Word) </li> <li>Kenntnisse/Erfahrung in speziellen oder allgemeinen Baustoffbereichen </li> <li>Selbständiges und eigenverantwortliches Arbeiten </li> </ul> <p> (Wer noch nicht so weit ist, aber dahin möchte, kann sich auch gerne als <strong>Auszubildende/r</strong> bewerben.) </p> <p> Jede persönliche Bewerbung mit Lebenslauf und Arbeits-/Ausbildungszeugnissen an </p> <p> <a href='mailto:upa@paeffgen.com'>upa@paeffgen.com</a> </p> <p> wird beantwortet! </p>",
+    "identifier": {
+        "@type": "PropertyValue",
+        "name": "Päffgen GmbH",
+        "value": "paeffgen_0001"
+    },
+    "datePosted": "2019-06-12",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Päffgen GmbH",
+        "sameAs": "https://dachbaustoffe.de",
+        "logo": "https://www.dachbaustoffe.de/resources/images/layout/logo.png"
+    },
+    "jobLocation": {
+        "@type": "Place",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Schwarzer Weg 16",
+            "addressLocality": "Kaarst",
+            "addressRegion": "NRW",
+            "postalCode": "41564",
+            "addressCountry": "DE"
+        }
+    }
+}
