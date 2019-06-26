@@ -3,7 +3,7 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "standard",
+    "extends": "eslint:recommended",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -11,12 +11,15 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module",
-        "experimentalObjectRestSpread": true,
         "impliedStrict": true,
         "classes": true,
         "legacyDecorators": true
     },
     "rules": {
-        "semi": [2, "always"]
+        "semi": [2, "always"],
+        "quotes": [ "error", "single" ],
+        "arrow-body-style": ["error", "never"],
+        "no-debugger": "warn",
+        "linebreak-style": [ "error", "unix" ],
     }
 };
