@@ -18,7 +18,7 @@ module.exports = {
     "rules": {
         "semi": [2, "always"],
         "quotes": [ "error", "single" ],
-        "arrow-body-style": ["error", "never"],
+        "arrow-body-style": ["error", "as-needed"],
         "no-debugger": "warn",
         "linebreak-style": [ "error", "unix" ],
     }
