@@ -6,7 +6,9 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "startgulp": "yarn run gulp",
-        "snippet": "yarn run gulp snippet"
+        "snippet": "yarn run gulp snippet",
+        "lint": "tslint *.ts",
+        "dev:watch": "nodemon -e ts --exec npm run lint"
     },
     "installConfig": {
         "pnp": true
@@ -23,7 +25,11 @@
         "cheerio": "^1.0.0-rc.3",
         "clipboardy": "^2.1.0",
         "css-mqpacker": "^7.0.0",
+<<<<<<< HEAD
         "eslint": "^6.2.2",
+=======
+        "eslint": "^6.3.0",
+>>>>>>> cfe0dc88bc93bf115699958453ca4b68f8b0ebdf
         "eslint-config-standard": "^14.1.0",
         "eslint-plugin-import": "^2.18.2",
         "eslint-plugin-node": "^9.2.0",
@@ -37,6 +43,10 @@
         "gulp-sourcemaps": "^2.6.5",
         "gulp-typescript": "^5.0.1",
         "gulp-uglify-es": "^1.0.4",
+<<<<<<< HEAD
+=======
+        "nodemon": "^1.19.2",
+>>>>>>> cfe0dc88bc93bf115699958453ca4b68f8b0ebdf
         "typescript": "^3.6.2"
     }
 }
