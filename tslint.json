@@ -5,15 +5,15 @@
             "options": [120]
         },
         "one-line": false,
+        "eofline": false,
+        "quotemark": [true, "single"],
+        "max-classes-per-file": [true, 5],
         "new-parens": true,
         "no-arg": true,
         "no-bitwise": true,
         "no-conditional-assignment": true,
         "no-consecutive-blank-lines": false,
-        "no-console": {
-            "severity": "warning",
-            "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
-        }
+        "no-console": false
     },
     "jsRules": {
         "max-line-length": {
