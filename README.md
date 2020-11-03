@@ -22,7 +22,7 @@ yarn install
 3. start gulp
 
 ```sh
-yarn run gulp
+gulp
 ```
 
 ---
@@ -30,7 +30,11 @@ yarn run gulp
 ## Create a StackOverflow Snippet
 
 ```sh
-yarn run gulp snippet
+ulp snippet
 ```
+
+## Bei Errors auf eine älter Node Version umschalten
+
+`nvm use 12`
 
 console output is copied to clipboard

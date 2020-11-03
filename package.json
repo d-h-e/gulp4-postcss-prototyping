@@ -42,5 +42,8 @@
         "nodemon": "^1.19.2",
         "ts-node": "^8.3.0",
         "typescript": "^3.6.2"
+    },
+    "dependencies": {
+        "node-sass": "^4.12.0"
     }
 }
